@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfTask11_1a.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTask11_1a"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <EllipseGeometry x:Key="circle1"
+                         Center="225,225"
+                         RadiusX="100"
+                         RadiusY="100"/>
+        <!--="White"-->
+        <EllipseGeometry x:Key="circle2"
+                         Center="225,225"
+                         RadiusX="125"
+                         RadiusY="125"/>
+        <RectangleGeometry x:Key="rect"
+                           Rect="95 25 220 25"/>
+
+        <Style TargetType="Path">
+            <Setter Property="Fill" Value="Red"/>
+            <Setter Property="Stroke" Value="Black"/>
+        </Style>
+    </Window.Resources>
+
+    <UniformGrid Rows="1" >
+        <Path>
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Union"
+                                  Geometry1="{StaticResource circle1}"
+                                  Geometry2="{StaticResource circle2}"
+                                  <!--Geometry3="{StaticResource rect}"/>-->
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>
+    </UniformGrid>
+</Window>

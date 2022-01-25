@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfTask11_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTask11_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="440" Width="440">
+
+    <Path x:Name="ring" Fill="Red" Stroke="Black">
+        <Path.Data>
+            <CombinedGeometry>
+                <CombinedGeometry.Geometry1>
+                    <CombinedGeometry GeometryCombineMode="Exclude">
+                        <CombinedGeometry.Geometry1>
+                            <EllipseGeometry RadiusX="150" RadiusY="150" Center="220,220"/>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry RadiusX="120" RadiusY="120" Center="220,220"/>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </CombinedGeometry.Geometry1>
+                <CombinedGeometry.Geometry2>
+                    <RectangleGeometry Rect="50,-215,250,30">
+                        <RectangleGeometry.Transform>
+                            <RotateTransform Angle="135" CenterX="110" CenterY="20" />
+                        </RectangleGeometry.Transform>
+                    </RectangleGeometry>
+                </CombinedGeometry.Geometry2>
+            </CombinedGeometry>
+        </Path.Data>
+    </Path>
+</Window>
